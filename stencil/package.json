@@ -1,0 +1,61 @@
+{
+  "name": "stencil",
+  "version": "0.0.1",
+  "description": "Stencil Component Starter",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "default": "./dist/aksel/aksel.esm.js",
+      "import": "./dist/aksel/aksel.esm.js",
+      "require": "./dist/cjs/aksel.cjs.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./css": "./dist/aksel/aksel.css"
+  },
+  "types": "./dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "build:stencil": "yarn build",
+    "start": "stencil build --dev --watch --serve",
+    "dev": "stencil build --watch",
+    "dev:stencil": "yarn dev",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate",
+    "storybook": "concurrently \"storybook dev -p 6006\" \"yarn dev\"",
+    "storybook:stencil": "yarn storybook",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@stencil/core": "^3.0.0"
+  },
+  "devDependencies": {
+    "@navikt/ds-tokens": "3.3.1",
+    "@storybook/addon-essentials": "^7.0.18",
+    "@storybook/addon-interactions": "^7.0.18",
+    "@storybook/addon-links": "^7.0.18",
+    "@storybook/blocks": "^7.0.18",
+    "@storybook/react": "^7.0.18",
+    "@storybook/react-vite": "^7.0.18",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.11",
+    "concurrently": "^8.0.1",
+    "jest": "^27.5.1",
+    "jest-cli": "^27.5.1",
+    "prop-types": "^15.8.1",
+    "puppeteer": "^19.5.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.18",
+    "vite": "4.3.9"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "starter",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "storybook": "yarn workspace stencil run storybook"
+  },
+  "workspaces": [
+    "./stencil",
+    "./stencil-vite",
+    "./stencil-svelte",
+    "./svelte"
+  ],
+  "license": "MIT",
+  "packageManager": "yarn@3.5.1",
+  "dependencies": {
+    "prettier": "2.8.8"
+  },
+  "prettier": {}
+}

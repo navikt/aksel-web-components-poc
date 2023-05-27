@@ -1,0 +1,20 @@
+.accordion-item:focus-within {
+  position: relative;
+}
+
+.accordion-item--last.accordion-item--open {
+  box-shadow: inset 2px 0 0 0 var(--a-transparent),
+    inset -2px 0 0 0 var(--a-transparent), inset 0 2px 0 0 var(--a-transparent),
+    inset 0 -2px 0 0 var(--__ac-accordion-header-shadow-color);
+}
+
+.accordion-item--open {
+  background-color: var(--ac-accordion-item-bg-open, var(--a-transparent));
+}
+
+.accordion-item--open.accordion-item--neutral {
+  background-color: var(
+    --ac-accordion-neutral-item-bg-open,
+    var(--a-surface-neutral-subtle)
+  );
+}
