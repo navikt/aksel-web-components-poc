@@ -26,7 +26,7 @@ Veldig informativ artikkel om stencil vs lit/fast: https://www.abeautifulsite.ne
 
 ## Svelte
 
-Klar favoritt til nå. Enkelt å sette opp, og veldig lite overhead. Kan bruke native svelte, og kompilerer til native web-components med bare en ekstra linje kode.
+TODO: Fikse state-handling
 
 **Pros:**
 
