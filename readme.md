@@ -1,5 +1,14 @@
 # Aksel Web-components POC
 
+Testrepo for utforsking av diverse web-component biblioteker og løsninger.
+
+## TODO:
+
+- Teste Svelte
+- Teste Lit
+- Teste native web-components
+- annet?
+
 ## https://stenciljs.com/
 
 **Pros:**
