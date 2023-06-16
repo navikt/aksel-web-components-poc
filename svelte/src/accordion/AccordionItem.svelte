@@ -7,17 +7,19 @@
   let last = false;
   let variant: "neutral" | "default" = "default";
 
-  let wrapper;
+  let wrapper: HTMLDivElement;
+  let header;
 
-  export function ontoggle() {
+  function ontoggle() {
     console.log(open);
     open = Boolean(!open);
+    header.open = open;
   }
+
   onMount(() => {
-    wrapper.addEventListener("akselAccordionToggle", ontoggle);
-  });
-  onDestroy(() => {
-    wrapper.removeEventListener("akselAccordionToggle", ontoggle);
+    header = wrapper.getRootNode().host.querySelector("a-accordion-header");
+    header.open = open;
+    header.ontoggle = ontoggle;
   });
 </script>
 

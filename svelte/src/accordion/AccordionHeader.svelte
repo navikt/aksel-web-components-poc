@@ -1,25 +1,18 @@
 <svelte:options tag="a-accordion-header" />
 
 <script lang="ts">
-  import { onMount } from "svelte";
-
   let last = false;
-
-  let button;
-  const handleClick = () => {
-    button.dispatchEvent(
-      new CustomEvent("akselAccordionToggle", { bubbles: true, composed: true })
-    );
-  };
+  export let open: boolean = false;
+  export let ontoggle: () => void = () => null;
 </script>
 
 <button
-  bind:this={button}
   class="accordion-header"
   class:accordion-header--last={last}
+  class:accordion-header--open={open}
   type="button"
   part="accordion-header"
-  on:click={handleClick}
+  on:click={ontoggle}
 >
   <div class="accordion-icon-wrapper">
     <svg
@@ -144,5 +137,8 @@
       box-shadow: var(--a-shadow-focus);
       border-radius: var(--a-border-radius-large);
     }
+  }
+  .accordion-header--open {
+    background-color: red;
   }
 </style>
