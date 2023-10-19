@@ -9,7 +9,8 @@
     "./stencil",
     "./stencil-vite",
     "./stencil-svelte",
-    "./svelte"
+    "./svelte",
+    "./lit"
   ],
   "license": "MIT",
   "packageManager": "yarn@3.5.1",

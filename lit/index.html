@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LIT + TS</title>
+    <script type="module" src="./dist/index.bundled.js"></script>
+    <style>
+      .testclass {
+        color: red;
+        --my-var: orange;
+      }
+    </style>
+  </head>
+  <body class="testclass">
+    <h1>LIT + TS demo</h1>
+    <div style="background-color: rgb(0 0 0 / 0.05); padding: 10rem">
+      <form onsubmit="console.log">
+        <button type="submit">test</button>
+        <simple-greeting name="what"></simple-greeting>
+        <aksel-button name="button"></aksel-button>
+      </form>
+    </div>
+  </body>
+</html>
