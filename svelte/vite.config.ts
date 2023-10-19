@@ -1,12 +1,12 @@
-import { defineConfig } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
+import { defineConfig } from "vite";
 
 export default defineConfig({
   build: {
     sourcemap: true,
     target: "modules",
     lib: {
-      entry: ["src/index.ts", "src/clock/Clock.svelte", "src/counter/Counter.svelte"],
+      entry: ["src/index.ts"],
       name: "<<name>>",
     },
   },
