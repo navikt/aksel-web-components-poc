@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LIT + TS</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="../dist/index.bundled.js"></script>
+    <script src="./index.js"></script>
+  </head>
+  <body class="testclass">
+    <main>
+      <div>
+        <h1>LIT demo - <a href="https://lit.dev/">Lit.dev</a></h1>
+
+        <div class="testframe">
+          <h2>Test av button + form interaksjon</h2>
+          <div>
+            <form id="form-id" class="testform">
+              <div>Native</div>
+              <input type="text" />
+              <button type="submit">Send inn</button>
+            </form>
+          </div>
+          <div>
+            <form id="form-id-webc" class="testform">
+              <div>Web components</div>
+              <input type="text" />
+              <a-button name="Send inn"></a-button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

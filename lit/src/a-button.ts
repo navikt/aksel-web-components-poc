@@ -1,8 +1,8 @@
 import { LitElement, css, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 
-@customElement("simple-greeting")
-export class SimpleGreeting extends LitElement {
+@customElement("a-button")
+export class AButton extends LitElement {
   // Define scoped styles right with your component, in plain CSS
   static styles = css`
     .testclass {
@@ -14,20 +14,14 @@ export class SimpleGreeting extends LitElement {
   @property({ type: String })
   name?: string = "World";
 
-  createRenderRoot() {
-    return this;
-  }
-
   // Render the UI as a function of component state
   render() {
-    return html`<button type="submit" class="testclass">
-      Hello, ${this.name}!
-    </button>`;
+    return html`<button type="submit" class="testclass">${this.name}</button>`;
   }
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    "simple-greeting": SimpleGreeting;
+    "a-button": AButton;
   }
 }
