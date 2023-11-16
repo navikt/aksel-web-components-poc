@@ -16,17 +16,36 @@
         const form = document.querySelector("form");
         const formData = new FormData(form);
 
-        const output = document.getElementById("output");
+        const output1 = document.getElementById("output1");
+        const output2 = document.getElementById("output2");
         for (const [key, value] of formData) {
-          output.textContent += `${key}: ${value}\n`;
+          if (key === "web-c") {
+            output1.textContent += `${key}: ${value}\n`;
+          } else {
+            output2.textContent += `${key}: ${value}\n`;
+          }
         }
       }
     </script>
-    <form onsubmit="return submitFunction(event)">
-      <a-input label="Input label" name="web-c"></a-input>
-      <input name="native" type="text" />
-      <button type="submit">Send</button>
-    </form>
-    <output id="output"></output>
+    <div class="layout-wrapper">
+      <form onsubmit="return submitFunction(event)" class="form">
+        <div class="layout">
+          <div>
+            <a-input label="Web component input" name="web-c"></a-input>
+          </div>
+          <div>
+            <div class="form-wrapper">
+              <label>Native input</label>
+              <input name="native" type="text" />
+            </div>
+          </div>
+        </div>
+        <button type="submit">Send</button>
+      </form>
+      <div class="layout">
+        <pre id="output1"></pre>
+        <pre id="output2"></pre>
+      </div>
+    </div>
   </body>
 </html>

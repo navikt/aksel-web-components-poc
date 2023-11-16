@@ -12,9 +12,57 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
   min-height: 100vh;
   justify-content: center;
   flex-direction: column;
   gap: 1rem;
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.form-inputs > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.form-wrapper {
+  display: grid;
+  gap: 0.25rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input {
+  min-height: 32px;
+  border-radius: 8px;
+  border: 1.5px solid #be185d;
+  padding-inline: 0.25rem;
+}
+
+.layout-wrapper {
+  max-width: 30rem;
+  min-height: 40rem;
+}
+
+button {
+  min-height: 32px;
+  border-radius: 4px;
+  border: none;
+  justify-self: flex-start;
+  border: 1px solid teal;
+  padding-inline: 1rem;
 }
